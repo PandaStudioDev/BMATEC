@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --color-matec-red: #e60012;
+  --color-technical-blue: #0057b8;
+  --color-industrial-gray: #c0c0c0;
+}
