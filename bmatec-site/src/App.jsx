@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <>
-      <h1 class="text-4xl text-center text-blue-500 bg-matec-red">
-        Hola, Matec
-      </h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        {/* TODO: Añadir Catálogo */}
+        {/* TODO: Añadir 'Hacer Cotización' */}
+      </Routes>
+    </Router>
   );
 }
 
