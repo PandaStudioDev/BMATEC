@@ -44,12 +44,12 @@ const Navbar = () => {
           <h2 className="text-xl font-bold text-matec-red">Menú</h2>
           <ul className="space-y-4 text-lg">
             <li>
-              <a href="#" className="hover:text-technical-blue">
+              <a href="/" className="hover:text-technical-blue">
                 Inicio
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-technical-blue">
+              <a href="/catalogo" className="hover:text-technical-blue">
                 Catálogo
               </a>
             </li>
