@@ -50,24 +50,19 @@ const Navbar = () => {
             </li>
             <li>
               <a href="#" className="hover:text-technical-blue">
-                Nosotros
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-technical-blue">
                 Catálogo
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-technical-blue">
-                Contacto
+                Hacer una Cotización
               </a>
             </li>
           </ul>
           <hr />
           <a
             href="#"
-            className="flex items-center gap-2 text-gray-600 hover:text-black"
+            className="flex items-center gap-2 text-gray-600 hover:text-black lg:mt-[60vh]"
           >
             <span>⚙️</span> Configuración
           </a>
@@ -75,7 +70,7 @@ const Navbar = () => {
             href="#"
             className="flex items-center gap-2 text-gray-600 hover:text-black"
           >
-            <span>🚪</span> Cerrar Sesión
+            <span>🚪</span> Visitanos en Facebook
           </a>
         </div>
       </div>
