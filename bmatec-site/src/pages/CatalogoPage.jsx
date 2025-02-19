@@ -9,6 +9,8 @@ function CatalogoPage() {
   return (
     <div>
       <NavBar />
+
+      {/* Products Main Section */}
       <h1 className="text-3xl font-bold my-8 text-center">
         Catálogo de Productos
       </h1>
@@ -17,6 +19,7 @@ function CatalogoPage() {
           <ProductoCard key={index} producto={producto} />
         ))}
       </div>
+
       <Footer />
     </div>
   );

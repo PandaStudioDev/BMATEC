@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+import LogoSrc from "../../assets/BOILERS.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +16,7 @@ const Navbar = () => {
         </button>
 
         {/* Logo */}
-        <h1 className="text-lg font-bold text-white">Boilers Matec</h1>
+        <img src={LogoSrc} alt="Logo" className="h-auto w-24 md:ml-20" />
 
         {/* Botón Cotización */}
         <a

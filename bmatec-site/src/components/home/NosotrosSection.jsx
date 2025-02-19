@@ -18,7 +18,7 @@ const NosotrosSection = () => {
   return (
     <section className="w-full">
       {/* HISTORIA */}
-      <div className="bg-gray-900 text-white py-16 px-6">
+      <div className="bg-matec-blue text-white py-16 px-6">
         <motion.h2
           className="text-3xl md:text-4xl font-bold mb-8"
           variants={fadeUpVariants}

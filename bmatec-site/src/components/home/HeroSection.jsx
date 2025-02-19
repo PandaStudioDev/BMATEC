@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <motion.section
-      className="relative w-full h-[300px] md:h-[500px] bg-gray-900 flex items-center justify-center"
+      className="relative w-full h-[300px] md:h-[500px] bg-matec-blue flex items-center justify-center"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}

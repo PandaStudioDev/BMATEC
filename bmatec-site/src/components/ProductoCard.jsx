@@ -14,7 +14,7 @@ const ProductoCard = ({ producto }) => {
   };
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm overflow-hidden shadow-lg rounded-xl p-6 hover:shadow-2xl transition-transform transform hover:-translate-y-1">
       <img className="w-full" src={imagen} alt={`${nombre} ${modelo}`} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">
@@ -31,7 +31,7 @@ const ProductoCard = ({ producto }) => {
       <div className="px-6 pt-4 pb-2">
         <button
           onClick={handleWhatsAppClick}
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-matec-blue hover:bg-technical-blue text-white font-bold py-2 px-4 rounded cursor-pointer"
         >
           Comprar Ahora
         </button>
