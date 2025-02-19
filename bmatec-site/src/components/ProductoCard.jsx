@@ -24,16 +24,16 @@ const ProductoCard = ({ producto }) => {
         <p className="text-gray-700 text-base">
           <strong>Incluye:</strong> {incluye}
         </p>
-        <p className="text-gray-700 text-base">
+        {/* <p className="text-gray-700 text-base">
           <strong>Precio estimado:</strong> ${precio_estimado}
-        </p>
+        </p> */}
       </div>
       <div className="px-6 pt-4 pb-2">
         <button
           onClick={handleWhatsAppClick}
           className="bg-matec-blue hover:bg-technical-blue text-white font-bold py-2 px-4 rounded cursor-pointer"
         >
-          Comprar Ahora
+          Cotizar Ahora
         </button>
       </div>
     </div>

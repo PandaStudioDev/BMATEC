@@ -37,14 +37,22 @@ const NosotrosSection = () => {
           viewport={{ once: false, amount: 0.2 }}
         >
           <p>
-            Aquí va la historia de la empresa: cómo nació Boilers Matec, su
-            trayectoria y su compromiso con la industria de planchado y
-            fusionado industrial.
+            Boilers Matec nació con el firme propósito de revolucionar el sector
+            industrial mediante soluciones de planchado y fusionado de alta
+            eficiencia. Desde nuestros inicios, nos hemos dedicado a diseñar y
+            proporcionar equipos industriales que no solo cumplen, sino que
+            superan las expectativas de nuestros clientes. Nuestra trayectoria
+            se ha caracterizado por una constante innovación y un compromiso
+            inquebrantable con la calidad, consolidándonos como líderes en
+            tecnología industrial moderna.
           </p>
           <img
-            src="/ruta-imagen-historia.jpg"
+            src="/historia.jpg"
             alt="Historia Boilers Matec"
-            className="w-full h-auto mt-4"
+            className="w-96 h-auto mt-4 mx-auto rounded-3xl"
+            // style={{
+            //   maskImage: "linear-gradient(to bottom, black, 98%, transparent)",
+            // }}
           />
         </motion.div>
       </div>
@@ -60,15 +68,25 @@ const NosotrosSection = () => {
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6">Misión</h3>
           <p className="mb-8">
-            Describir aquí la misión de la empresa, enfocada en proveer
-            soluciones eficientes y de alta calidad en equipos industriales de
-            planchado y fusionado.
+            Nuestra misión es ser el aliado estratégico de las empresas que
+            buscan optimizar su productividad a través de equipos de planchado y
+            fusionado de alto rendimiento. Nos dedicamos a ofrecer soluciones
+            integrales que incluyen la venta de maquinaria industrial de
+            vanguardia, refacciones de calidad y servicios de mantenimiento
+            especializados. Todo ello respaldado por un equipo de expertos
+            comprometidos con la excelencia y la satisfacción total de nuestros
+            clientes.
           </p>
 
           <h3 className="text-2xl md:text-3xl font-bold mb-6">Visión</h3>
           <p>
-            Explicar la visión de la empresa a largo plazo, su compromiso con la
-            innovación y la satisfacción del cliente.
+            Aspiramos a consolidarnos como la empresa líder en soluciones
+            industriales a nivel nacional, reconocida por nuestra capacidad de
+            innovación, calidad superior y atención personalizada. Buscamos
+            expandir nuestra presencia en el mercado, adaptándonos a las
+            necesidades cambiantes de nuestros clientes y contribuyendo al
+            desarrollo sostenible de la industria mediante prácticas
+            responsables y productos eficientes.
           </p>
         </motion.div>
       </div>
@@ -98,7 +116,7 @@ const NosotrosSection = () => {
               Matec, nuestro proceso de planchado es mucho más eficiente."
             </p>
             <div className="mt-4 text-right text-sm text-gray-500">
-              – Cliente Satisfecho
+              – Texnova S.A.
             </div>
           </motion.div>
 
@@ -114,7 +132,24 @@ const NosotrosSection = () => {
               de producción. ¡Recomendadísimos!"
             </p>
             <div className="mt-4 text-right text-sm text-gray-500">
-              – Otro Cliente
+              – Planchado Tulancingo
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="bg-white p-6 rounded shadow"
+            variants={fadeUpVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            <p>
+              "La calidad de sus productos y el servicio al cliente es
+              inigualable. Sin duda, una excelente inversión para nuestra
+              empresa."
+            </p>
+            <div className="mt-4 text-right text-sm text-gray-500">
+              – Industrias López
             </div>
           </motion.div>
         </div>

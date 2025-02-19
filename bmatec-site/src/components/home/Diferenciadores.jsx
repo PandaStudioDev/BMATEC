@@ -1,14 +1,17 @@
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Check } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Diferenciadores = () => {
   const images = [
-    "/diferenciadores/8.jpg",
-    "/diferenciadores/9.jpg",
-    "/diferenciadores/10.jpg",
+    "/secuencia/1.png",
+    "/secuencia/2.png",
+    "/secuencia/3.png",
+    "/secuencia/4.png",
+    "/secuencia/5.png",
   ];
 
   const [currentFrame, setCurrentFrame] = useState(0);
@@ -79,7 +82,7 @@ const Diferenciadores = () => {
               ref={(el) => (mejorasRef.current[index] = el)}
               className="text-2xl font-semibold opacity-0 transform translate-y-10"
             >
-              ✅ {mejora}
+              <Check className="inline text-3xl font-extrabold" /> {mejora}
             </div>
           ))}
         </div>

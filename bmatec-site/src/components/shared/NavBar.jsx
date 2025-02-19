@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/* Botón Cotización */}
         <a
-          href="#"
+          href="/cotizar"
           className="hidden lg:block border-b border-white hover:text-gray-300"
         >
           Hacer una Cotización
@@ -56,20 +56,20 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-technical-blue">
+              <a href="/cotizar" className="hover:text-technical-blue">
                 Hacer una Cotización
               </a>
             </li>
           </ul>
           <hr />
-          <a
+          {/* <a
             href="#"
             className="flex items-center gap-2 text-gray-600 hover:text-black lg:mt-[60vh]"
           >
             <span>⚙️</span> Configuración
-          </a>
+          </a> */}
           <a
-            href="#"
+            href="https://www.facebook.com/matecmonse"
             className="flex items-center gap-2 text-gray-600 hover:text-black"
           >
             <span>🚪</span> Visitanos en Facebook

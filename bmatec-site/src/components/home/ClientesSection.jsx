@@ -4,11 +4,11 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 const clientes = [
-  { nombre: "Empresa A", logo: "/clientes/empresa-a.png" },
-  { nombre: "Empresa B", logo: "/clientes/empresa-b.png" },
-  { nombre: "Empresa C", logo: "/clientes/empresa-c.png" },
-  { nombre: "Empresa D", logo: "/clientes/empresa-d.png" },
-  { nombre: "Empresa E", logo: "/clientes/empresa-e.png" },
+  { nombre: "Boilers Inc.", logo: "/clientes/boilers-inc.png" },
+  { nombre: "SteamWorks", logo: "/clientes/steamworks.png" },
+  { nombre: "IronMasters", logo: "/clientes/ironmasters.png" },
+  { nombre: "HeatWave Co.", logo: "/clientes/heatwave-co.png" },
+  { nombre: "Precision Boilers", logo: "/clientes/precision-boilers.png" },
 ];
 
 const ClientesSection = () => {

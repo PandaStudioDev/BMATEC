@@ -10,13 +10,13 @@ const HeroSection = () => {
     >
       {/* Imagen de fondo */}
       <img
-        src="/ruta-a-la-imagen-de-portada.jpg"
+        src="/banner.jpg"
         alt="Boilers Matec Portada"
         className="absolute inset-0 w-full h-full object-cover opacity-80"
       />
 
       {/* Texto o slogan */}
-      <div className="relative text-center text-white">
+      <div className="relative text-center text-white bg-matec-red p-6 rounded-2xl border-8 border-black">
         <h1 className="text-3xl md:text-5xl font-bold drop-shadow-lg">
           Soluciones Profesionales de Planchado y Fusionado
         </h1>
