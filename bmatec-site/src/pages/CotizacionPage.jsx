@@ -6,7 +6,6 @@ function LandingPage() {
   const [nombre, setNombre] = useState("");
   const [telefono, setTelefono] = useState("");
   const [producto, setProducto] = useState("");
-  const [similar, setSimilar] = useState("");
   const [tamano, setTamano] = useState("");
   const [energia, setEnergia] = useState("");
   const [capacidad, setCapacidad] = useState("");
@@ -16,9 +15,8 @@ function LandingPage() {
   const enviarWhatsApp = () => {
     const numeroMatec = "5217751485546";
 
-    const mensaje = `¡Hola! Quiero solicitar una cotización en Boilers Matec.\n\n
-    🔹 Producto de interés: *${producto || "No seleccionado"}*\n
-    🔹 Busco algo similar a: *${similar || "No especificado"}*\n
+    const mensaje = `¡Hola! Me gustaría solicitar una Cotización.\n\n
+    🔹 Busco algo Similar a: *${producto || "No seleccionado"}*\n
     🔹 Tamaño Aproximado: *${tamano || "No especificado"}*\n
     🔹 Tipo de Energía: *${energia || "No especificado"}*\n
     🔹 Capacidad Estimada: *${capacidad || "No especificado"}*\n
@@ -67,15 +65,6 @@ function LandingPage() {
           onChange={(e) => setProducto(e.target.value)}
           className="w-full p-2 border rounded mb-2"
           placeholder="Ej: Generador de Vapor"
-        />
-
-        <label className="block font-semibold">Busco algo similar a:</label>
-        <input
-          type="text"
-          value={similar}
-          onChange={(e) => setSimilar(e.target.value)}
-          className="w-full p-2 border rounded mb-2"
-          placeholder="Ej: Generador Alta Presión"
         />
 
         <label className="block font-semibold">Tamaño Aproximado:</label>

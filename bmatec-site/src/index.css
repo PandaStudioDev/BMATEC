@@ -6,3 +6,17 @@
   --color-matec-blue: #0057b8;
   --color-industrial-gray: #c0c0c0;
 }
+
+@keyframes catalogPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-catalogPulse {
+  animation: catalogPulse 2s ease-in-out infinite;
+}

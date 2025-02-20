@@ -21,68 +21,82 @@ const Diferenciadores = () => {
   useEffect(() => {
     const section = sectionRef.current;
 
-    // 🎞️ Cambia la imagen de fondo conforme al scroll
+    // Limpiar cualquier ScrollTrigger previo (útil en caso de hot-reload)
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
+    // Configuración del trigger que fija la sección y actualiza la secuencia de imágenes
     ScrollTrigger.create({
       trigger: section,
       start: "top top",
-      end: "+=100%",
-      scrub: 0.5, // 🔹 Más responsivo
+      end: "+=300%", // Extiende el tiempo de enfoque para apreciar la animación
+      scrub: 1, // Transición fluida
+      pin: true, // Fija la sección durante el scroll
       onUpdate: (self) => {
-        const index = Math.round(self.progress * (images.length - 1));
+        const index = Math.min(
+          images.length - 1,
+          Math.round(self.progress * (images.length - 1))
+        );
         setCurrentFrame(index);
       },
+      // markers: true,
     });
 
-    // ✨ Animación de las mejoras progresivas
-    mejorasRef.current.forEach((el, index) => {
+    // Animación de las ventajas: se disparan en función del scroll en la sección
+    mejorasRef.current.forEach((el) => {
       gsap.fromTo(
         el,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 2,
+          ease: "power2.out",
           scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: 0.5,
+            trigger: el, // Cada elemento se usa como disparador
+            start: "top 30%", // Cuando la parte superior del elemento llega al 80% del viewport
+            end: "bottom", // Hasta que la parte inferior llegue al 60%
+            scrub: true, // Sincroniza la animación con el scroll
+            // markers: true,
           },
         }
       );
     });
-  }, []);
+  }, [images.length]);
 
   return (
     <section
       ref={sectionRef}
-      className="relative h-[150vh] bg-black text-white overflow-hidden"
+      className="relative h-screen bg-black text-white overflow-hidden"
     >
-      {/* Imagen de Fondo Dinámica */}
+      {/* Imagen de fondo dinámica */}
       <img
         src={images[currentFrame]}
-        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
         alt="Animación Scroll"
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-linear"
       />
 
-      {/* Contenido de la Sección */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-10 px-6 text-center">
-        <h2 className="text-4xl font-bold">¿Por qué elegir Boilers Matec?</h2>
+      {/* Contenido de la sección */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-10 px-4 sm:px-6 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          Ventajas Competitivas de Boilers Matec
+        </h2>
 
-        {/* Mejoras con animación */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {[
             "Mayor eficiencia energética",
-            "Materiales de alta calidad",
-            "Soporte técnico 24/7",
-            "Innovación y tecnología avanzada",
+            "Materiales de alta calidad y durabilidad",
+            "Soporte técnico casi 24/7 y asesoría experta",
+            "Innovación y tecnología de vanguardia",
+            "Instalación y mantenimiento integral",
+            "Atención personalizada y compromiso con la excelencia",
           ].map((mejora, index) => (
             <div
               key={index}
               ref={(el) => (mejorasRef.current[index] = el)}
-              className="text-2xl font-semibold opacity-0 transform translate-y-10"
+              className="flex items-center justify-center text-xl sm:text-2xl font-semibold opacity-0 transform translate-y-10"
             >
-              <Check className="inline text-3xl font-extrabold" /> {mejora}
+              <Check className="mr-2 text-3xl animate-pulse" />
+              {mejora}
             </div>
           ))}
         </div>

@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 
 /**
- * Variantes de animación:
- * - "hidden": estado inicial (elemento invisible/desplazado)
- * - "show": estado final (elemento visible/posición normal)
+ * Variantes de animación para el contenido textual.
  */
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -14,13 +12,26 @@ const fadeUpVariants = {
   },
 };
 
+/**
+ * Variantes de animación para la imagen.
+ * Se aplica un efecto de escalado para enfatizar la entrada de la imagen.
+ */
+const imageVariants = {
+  hidden: { opacity: 0, scale: 1.1 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 const NosotrosSection = () => {
   return (
     <section className="w-full">
       {/* HISTORIA */}
       <div className="bg-matec-blue text-white py-16 px-6">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-8"
+          className="text-3xl md:text-4xl font-bold mb-8 text-center"
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="show"
@@ -30,13 +41,13 @@ const NosotrosSection = () => {
         </motion.h2>
 
         <motion.div
-          className="max-w-4xl mx-auto space-y-4"
+          className="max-w-4xl mx-auto space-y-6"
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.2 }}
         >
-          <p>
+          <p className="text-lg leading-relaxed">
             Boilers Matec nació con el firme propósito de revolucionar el sector
             industrial mediante soluciones de planchado y fusionado de alta
             eficiencia. Desde nuestros inicios, nos hemos dedicado a diseñar y
@@ -46,13 +57,14 @@ const NosotrosSection = () => {
             inquebrantable con la calidad, consolidándonos como líderes en
             tecnología industrial moderna.
           </p>
-          <img
+          <motion.img
             src="/historia.jpg"
             alt="Historia Boilers Matec"
-            className="w-96 h-auto mt-4 mx-auto rounded-3xl"
-            // style={{
-            //   maskImage: "linear-gradient(to bottom, black, 98%, transparent)",
-            // }}
+            variants={imageVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+            className="w-full aspect-video mt-4 mx-auto rounded-3xl object-cover shadow-lg"
           />
         </motion.div>
       </div>
@@ -60,33 +72,29 @@ const NosotrosSection = () => {
       {/* MISIÓN Y VISIÓN */}
       <div className="bg-matec-red text-white py-16 px-6">
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto space-y-6"
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6">Misión</h3>
-          <p className="mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Misión</h3>
+          <p className="text-lg leading-relaxed">
             Nuestra misión es ser el aliado estratégico de las empresas que
             buscan optimizar su productividad a través de equipos de planchado y
-            fusionado de alto rendimiento. Nos dedicamos a ofrecer soluciones
-            integrales que incluyen la venta de maquinaria industrial de
-            vanguardia, refacciones de calidad y servicios de mantenimiento
-            especializados. Todo ello respaldado por un equipo de expertos
-            comprometidos con la excelencia y la satisfacción total de nuestros
-            clientes.
+            fusionado de alto rendimiento. Ofrecemos soluciones integrales que
+            incluyen maquinaria industrial de vanguardia, refacciones de calidad
+            y servicios de mantenimiento especializados, respaldados por un
+            equipo comprometido con la excelencia.
           </p>
 
-          <h3 className="text-2xl md:text-3xl font-bold mb-6">Visión</h3>
-          <p>
+          <h3 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Visión</h3>
+          <p className="text-lg leading-relaxed">
             Aspiramos a consolidarnos como la empresa líder en soluciones
-            industriales a nivel nacional, reconocida por nuestra capacidad de
-            innovación, calidad superior y atención personalizada. Buscamos
-            expandir nuestra presencia en el mercado, adaptándonos a las
-            necesidades cambiantes de nuestros clientes y contribuyendo al
-            desarrollo sostenible de la industria mediante prácticas
-            responsables y productos eficientes.
+            industriales a nivel nacional, reconocida por nuestra innovación,
+            calidad superior y atención personalizada. Buscamos expandir nuestra
+            presencia, adaptándonos a las necesidades de nuestros clientes y
+            contribuyendo al desarrollo sostenible de la industria.
           </p>
         </motion.div>
       </div>
@@ -104,54 +112,42 @@ const NosotrosSection = () => {
         </motion.h3>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div
-            className="bg-white p-6 rounded shadow"
-            variants={fadeUpVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <p>
-              "Excelente servicio y equipos de alta calidad. Gracias a Boilers
-              Matec, nuestro proceso de planchado es mucho más eficiente."
-            </p>
-            <div className="mt-4 text-right text-sm text-gray-500">
-              – Texnova S.A.
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="bg-white p-6 rounded shadow"
-            variants={fadeUpVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <p>
-              "Con su asesoría, encontramos la máquina ideal para nuestra línea
-              de producción. ¡Recomendadísimos!"
-            </p>
-            <div className="mt-4 text-right text-sm text-gray-500">
-              – Planchado Tulancingo
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="bg-white p-6 rounded shadow"
-            variants={fadeUpVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <p>
-              "La calidad de sus productos y el servicio al cliente es
-              inigualable. Sin duda, una excelente inversión para nuestra
-              empresa."
-            </p>
-            <div className="mt-4 text-right text-sm text-gray-500">
-              – Industrias López
-            </div>
-          </motion.div>
+          {[
+            {
+              testimonial:
+                "Excelente servicio y equipos de alta calidad. Gracias a Boilers Matec, nuestro proceso de planchado es mucho más eficiente.",
+              cliente: "Texnova S.A.",
+            },
+            {
+              testimonial:
+                "Con su asesoría, encontramos la máquina ideal para nuestra línea de producción. ¡Recomendadísimos!",
+              cliente: "Planchado Tulancingo",
+            },
+            {
+              testimonial:
+                "La calidad de sus productos y el servicio al cliente es inigualable. Sin duda, una excelente inversión para nuestra empresa.",
+              cliente: "Industrias López",
+            },
+            {
+              testimonial:
+                "La mejor eficiencia energética! No ayudó a mejorar la calidad de nuestros productos y a reducir costos. ¡Estamos muy satisfechos!",
+              cliente: "Textiles San Miguel",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="bg-white p-6 rounded shadow hover:shadow-xl transition-shadow duration-300"
+              variants={fadeUpVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <p className="text-base">{item.testimonial}</p>
+              <div className="mt-4 text-right text-sm text-gray-500">
+                – {item.cliente}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
