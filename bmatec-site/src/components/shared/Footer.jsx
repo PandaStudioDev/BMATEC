@@ -26,7 +26,12 @@ const Footer = () => {
             </p>
 
             <h3 className="text-lg font-semibold mt-4 mb-2">Contacto:</h3>
-            <p className="text-gray-400">contacto@boilersmatec.com</p>
+            <a
+              href="mailto:almeidamonserrath66@gmail.com"
+              className="text-gray-400"
+            >
+              almeidamonserrath66@gmail.com
+            </a>
           </div>
 
           {/* Mapa */}

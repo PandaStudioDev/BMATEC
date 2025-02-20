@@ -16,7 +16,9 @@ const Navbar = () => {
         </button>
 
         {/* Logo */}
-        <img src={LogoSrc} alt="Logo" className="h-auto w-24 md:ml-20" />
+        <a href="/">
+          <img src={LogoSrc} alt="Logo" className="h-auto w-24 md:ml-20" />
+        </a>
 
         {/* Botón Cotización */}
         <a

@@ -1,12 +1,12 @@
 import React from "react";
 
 const ProductoCard = ({ producto }) => {
-  const { nombre, modelo, descripcion, incluye, precio_estimado, imagen } =
+  const { nombre, modelo, descripcion, alimentacion, incluye, imagen } =
     producto;
 
   const handleWhatsAppClick = () => {
-    const mensaje = `Hola, estoy interesado en el producto ${nombre} (${modelo}). ¿Podrían proporcionarme más información?`;
-    const numeroTelefono = "5217751485546"; // Número de WhatsApp de Boilers MATEC
+    const mensaje = `Hola, estoy interesado en uno de sus equipos\nMe gustaría cotizar una ${nombre} (${modelo}).\n¿Podrían apoyarme con más información?`;
+    const numeroTelefono = "5217751485546"; // Número de WhatsApp de Boilers Matec
     const url = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(
       mensaje
     )}`;
@@ -14,24 +14,32 @@ const ProductoCard = ({ producto }) => {
   };
 
   return (
-    <div className="max-w-sm overflow-hidden shadow-lg rounded-xl p-6 hover:shadow-2xl transition-transform transform hover:-translate-y-1">
-      <img className="w-full" src={imagen} alt={`${nombre} ${modelo}`} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">
-          {nombre} ({modelo})
-        </div>
-        <p className="text-gray-700 text-base">{descripcion}</p>
-        <p className="text-gray-700 text-base">
-          <strong>Incluye:</strong> {incluye}
-        </p>
-        {/* <p className="text-gray-700 text-base">
-          <strong>Precio estimado:</strong> ${precio_estimado}
-        </p> */}
+    <div className="max-w-xl mx-auto overflow-hidden bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+          src={imagen}
+          alt={`${nombre} ${modelo}`}
+        />
       </div>
-      <div className="px-6 pt-4 pb-2">
+      <div className="px-4 py-4">
+        <h3 className="font-bold text-2xl mb-2 text-gray-800">
+          {nombre} ({modelo})
+        </h3>
+        <p className="text-gray-600 text-base mb-2">{descripcion}</p>
+        <p className="text-gray-600 text-base mb-2">
+          <strong>Alimentación:</strong> {alimentacion}
+        </p>
+        {incluye && (
+          <p className="text-gray-600 text-base mb-2">
+            <strong>Incluye:</strong> {incluye}
+          </p>
+        )}
+      </div>
+      <div className="px-4 pb-4">
         <button
           onClick={handleWhatsAppClick}
-          className="bg-matec-blue hover:bg-technical-blue text-white font-bold py-2 px-4 rounded cursor-pointer"
+          className="w-full bg-gradient-to-r from-matec-blue to-technical-blue hover:from-technical-blue hover:to-matec-blue text-white font-bold py-3 px-4 rounded transition-colors duration-300"
         >
           Cotizar Ahora
         </button>

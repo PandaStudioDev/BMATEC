@@ -1,50 +1,35 @@
 export const Catalogo = [
   {
+    nombre: "Caldera",
+    modelo: "MATEC",
+    descripcion: "Diferentes capacidades de Caballajes",
+    alimentacion: "Gas o Electrogas",
+    imagen: "/catalogo/caldera.jpg",
+  },
+  {
+    nombre: "Fusionadora",
+    modelo: "FUC2025-90",
+    descripcion:
+      "Fusionadora automática 90cm\nBandas de Teflón Negro de 14 milésimas\nSensores de Correción de Banda\nTiempo y Temperatura Ajustable",
+    alimentacion: "Consumo de Energía Trifásica",
+    imagen: "/catalogo/fusionadora.jpg",
+  },
+  {
+    nombre: "Generador Automático",
+    modelo: "MOD-GV6",
+    descripcion:
+      "Diferentes Capacidades (2, 4, 6 Planchas)\nVálvula de Seguridad\nPresión de Trabajo: 4.5k",
+    alimentacion: "Luz: 220V o Trifásica | Agua: Agua Potable",
+    imagen: "/catalogo/generador.jpg",
+  },
+  {
     nombre: "Mesa de Planchado",
     modelo: "M2025-A1",
-    descripcion: "Salida de vapor del área de planchado.",
-    incluye: "Plancha y Descanso de Acero Inoxidable",
-    precio_estimado: 5000,
-    imagen: "/catalogo/plancha.jpg",
-  },
-  {
-    nombre: "Boiler de Paso",
-    modelo: "B1000-F1",
-    descripcion: "Boiler de paso de alta eficiencia energética.",
-    incluye: "Manual de usuario y garantía de 5 años",
-    precio_estimado: 12000,
-    imagen: "/catalogo/plancha.jpg",
-  },
-  {
-    nombre: "Caldera Industrial",
-    modelo: "C2000-G2",
-    descripcion: "Caldera industrial para procesos de alta demanda.",
-    incluye: "Manual de usuario y garantía de 10 años",
-    precio_estimado: 50000,
-    imagen: "/catalogo/plancha.jpg",
-  },
-  {
-    nombre: "Plancha a Vapor",
-    modelo: "P3000-H3",
-    descripcion: "Plancha a vapor con múltiples ajustes de temperatura.",
-    incluye: "Manual de usuario y garantía de 2 años",
-    precio_estimado: 3000,
-    imagen: "/catalogo/plancha.jpg",
-  },
-  {
-    nombre: "Caldera de Alta Presión",
-    modelo: "C3000-L3",
-    descripcion: "Caldera de alta presión para aplicaciones industriales.",
-    incluye: "Manual de usuario y garantía de 8 años",
-    precio_estimado: 75000,
-    imagen: "/catalogo/plancha.jpg",
-  },
-  {
-    nombre: "Plancha Industrial",
-    modelo: "P4000-M4",
-    descripcion: "Plancha industrial con alta capacidad de vapor.",
-    incluye: "Manual de usuario y garantía de 3 años",
-    precio_estimado: 5000,
+    descripcion:
+      "Salida de vapor incluida\nGraduador de Temperatura\nBrazo de Retoque",
+    alimentacion: "Trifásica",
+    incluye:
+      "Generador de Vapor\nPlancha y Descanso para Plancha de Acero Inoxidable",
     imagen: "/catalogo/plancha.jpg",
   },
 ];
