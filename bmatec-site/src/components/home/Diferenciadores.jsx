@@ -78,7 +78,7 @@ const Diferenciadores = () => {
       {/* Contenido de la sección */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-10 px-4 sm:px-6 text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Ventajas Competitivas de Boilers Matec
+          ¿Por qué Boilers MATEC?
         </h2>
 
         <div className="space-y-6">
