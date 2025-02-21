@@ -19,7 +19,7 @@ const CTASection = () => {
       </p>
       <a
         href="/catalogo"
-        className="mt-6 inline-block px-8 py-4 bg-red-600 text-white text-lg font-bold rounded-md hover:bg-red-700 transition transform animate-catalogPulse"
+        className="mt-6 inline-block px-8 py-4 bg-red-600 text-white text-lg font-bold pfont rounded-md hover:bg-red-700 transition transform animate-catalogPulse"
       >
         Ver Catálogo
       </a>

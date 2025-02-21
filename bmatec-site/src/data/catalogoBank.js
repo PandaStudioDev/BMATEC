@@ -32,4 +32,13 @@ export const Catalogo = [
       "Generador de Vapor\nPlancha y Descanso para Plancha de Acero Inoxidable",
     imagen: "/catalogo/plancha.jpg",
   },
+  {
+    nombre: "Mesa de Planchado",
+    modelo: "M2025-A2",
+    descripcion:
+      "Suministro a 2 Planchas\nVacío - Soplado\nGraduador de Temperatura\nBrazo de Retoque",
+    alimentacion: "Trifásica",
+    incluye: "1 Plancha y Descanso para Plancha de Acero Inoxidable",
+    imagen: "/catalogo/plancha2.jpg",
+  },
 ];

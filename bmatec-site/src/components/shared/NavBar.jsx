@@ -32,7 +32,7 @@ const Navbar = () => {
       {/* OVERLAY para cuando el menú está abierto */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-25 z-40 transition-opacity duration-300"
+          className="fixed inset-0 bg-black opacity-35 z-40 transition-opacity duration-300"
           onClick={() => setIsOpen(false)}
         ></div>
       )}

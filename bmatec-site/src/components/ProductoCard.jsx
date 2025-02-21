@@ -14,10 +14,10 @@ const ProductoCard = ({ producto }) => {
   };
 
   return (
-    <div className="max-w-xl mx-auto overflow-hidden bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+    <div className="md:max-w-xl mx-auto overflow-hidden bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
       <div className="overflow-hidden rounded-lg">
         <img
-          className="w-xl h-60 object-cover transition-transform duration-300 hover:scale-105"
+          className="w-60 md:w-xl h-60 object-cover transition-transform duration-300 hover:scale-105 mx-auto"
           src={imagen}
           alt={`${nombre} ${modelo}`}
         />
