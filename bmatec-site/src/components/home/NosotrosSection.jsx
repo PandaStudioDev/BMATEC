@@ -37,7 +37,7 @@ const NosotrosSection = () => {
           whileInView="show"
           viewport={{ once: false, amount: 0.2 }}
         >
-          Nosotros
+          <span class="pfont">Nosotros</span>
         </motion.h2>
 
         <motion.div
@@ -78,7 +78,7 @@ const NosotrosSection = () => {
           whileInView="show"
           viewport={{ once: false, amount: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Misión</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 pfont">Misión</h3>
           <p className="text-lg leading-relaxed">
             Nuestra misión es ser el aliado estratégico de las empresas que
             buscan optimizar su productividad a través de equipos de planchado y
@@ -88,7 +88,9 @@ const NosotrosSection = () => {
             equipo comprometido con la excelencia.
           </p>
 
-          <h3 className="text-2xl md:text-3xl font-bold mt-8 mb-4">Visión</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mt-8 mb-4 pfont">
+            Visión
+          </h3>
           <p className="text-lg leading-relaxed">
             Aspiramos a consolidarnos como la empresa líder en soluciones
             industriales a nivel nacional, reconocida por nuestra innovación,
@@ -102,7 +104,7 @@ const NosotrosSection = () => {
       {/* TESTIMONIOS */}
       <div className="bg-gray-100 text-gray-800 py-16 px-6">
         <motion.h3
-          className="text-2xl md:text-3xl font-bold mb-8 text-center"
+          className="text-2xl md:text-3xl font-bold mb-8 text-center pfont"
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="show"

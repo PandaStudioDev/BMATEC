@@ -15,7 +15,7 @@ const ClientesSection = () => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center px-4">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4 pfont">
           Clientes MATEC
         </h2>
         <div className="border-t-4 border-matec-red w-24 md:w-32 mx-auto mb-8"></div>
