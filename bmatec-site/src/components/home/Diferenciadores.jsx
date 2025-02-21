@@ -6,40 +6,10 @@ import { Check } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Diferenciadores = () => {
-  const images = [
-    "/secuencia/1.png",
-    "/secuencia/2.png",
-    "/secuencia/3.png",
-    "/secuencia/4.png",
-    "/secuencia/5.png",
-  ];
-
-  const [currentFrame, setCurrentFrame] = useState(0);
-  const sectionRef = useRef(null);
   const mejorasRef = useRef([]);
 
   useEffect(() => {
-    const section = sectionRef.current;
-
-    // Limpiar cualquier ScrollTrigger previo (útil en caso de hot-reload)
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-
-    // Configuración del trigger que fija la sección y actualiza la secuencia de imágenes
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: "+=300%", // Extiende el tiempo de enfoque para apreciar la animación
-      scrub: 2,
-      pin: true, // Fija la sección durante el scroll
-      onUpdate: (self) => {
-        const index = Math.min(
-          images.length - 1,
-          Math.round(self.progress * (images.length - 1))
-        );
-        setCurrentFrame(index);
-      },
-      // markers: true,
-    });
 
     mejorasRef.current.forEach((el) => {
       gsap.fromTo(
@@ -52,27 +22,26 @@ const Diferenciadores = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 30%",
+            start: "top 80%",
             end: "bottom",
             scrub: 2,
-            // markers: true,
+            markers: true,
           },
         }
       );
     });
-  }, [images.length]);
+  }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative h-screen bg-black text-white overflow-hidden"
-    >
-      {/* Imagen de fondo dinámica */}
-      <img
-        src={images[currentFrame]}
-        alt="Animación Scroll"
-        className="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-linear"
-      />
+    <section className="relative h-screen bg-black text-white overflow-hidden">
+      <div>
+        <img
+          src="/secuencia/1.jpg"
+          alt="Imagen fondo diferenciadores"
+          className="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-linear"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
 
       {/* Contenido de la sección */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-10 px-4 sm:px-6 text-center">
