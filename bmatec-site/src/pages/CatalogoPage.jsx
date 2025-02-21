@@ -12,7 +12,7 @@ function CatalogoPage() {
         <h1 className="text-4xl font-bold text-center mb-8">
           Catálogo de Productos
         </h1>
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {Catalogo.map((producto, index) => (
             <ProductoCard key={index} producto={producto} />
           ))}
