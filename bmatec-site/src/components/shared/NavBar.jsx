@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
 
 import LogoSrc from "../../assets/BOILERS.png";
 
@@ -28,6 +28,14 @@ const Navbar = () => {
           Hacer una Cotización
         </a>
       </nav>
+
+      {/* OVERLAY para cuando el menú está abierto */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-25 z-40 transition-opacity duration-300"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
 
       {/* MENÚ DESPLEGABLE */}
       <div
@@ -72,9 +80,12 @@ const Navbar = () => {
           </a> */}
           <a
             href="https://www.facebook.com/matecmonse"
-            className="flex items-center gap-2 text-gray-600 hover:text-black"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-gray-600 hover:text-blue-800 transition-colors duration-200"
           >
-            <span>🚪</span> Visitanos en Facebook
+            <Facebook className="w-5 h-5" />
+            Visítanos en Facebook
           </a>
         </div>
       </div>
