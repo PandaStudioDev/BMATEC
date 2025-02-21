@@ -17,7 +17,7 @@ const ProductoCard = ({ producto }) => {
     <div className="max-w-xl mx-auto overflow-hidden bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-1">
       <div className="overflow-hidden rounded-lg">
         <img
-          className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+          className="w-xl h-60 object-cover transition-transform duration-300 hover:scale-105"
           src={imagen}
           alt={`${nombre} ${modelo}`}
         />

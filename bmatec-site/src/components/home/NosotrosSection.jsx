@@ -64,7 +64,7 @@ const NosotrosSection = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.2 }}
-            className="w-full aspect-video mt-4 mx-auto rounded-3xl object-cover shadow-lg"
+            className="w-3xl aspect-video mx-auto rounded-3xl object-cover object-top shadow-lg border-4 border-b-6 border-white"
           />
         </motion.div>
       </div>

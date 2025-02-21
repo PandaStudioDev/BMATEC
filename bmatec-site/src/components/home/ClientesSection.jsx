@@ -4,11 +4,11 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 const clientes = [
-  { nombre: "Boilers Inc.", logo: "/clientes/boilers-inc.png" },
-  { nombre: "SteamWorks", logo: "/clientes/steamworks.png" },
-  { nombre: "IronMasters", logo: "/clientes/ironmasters.png" },
-  { nombre: "HeatWave Co.", logo: "/clientes/heatwave-co.png" },
-  { nombre: "Precision Boilers", logo: "/clientes/precision-boilers.png" },
+  { nombre: "Texnova Tulancingo", logo: "/clientes/texnova.jpg" },
+  { nombre: "SteamWorks", logo: "/clientes/steam.webp" },
+  { nombre: "IronMasters", logo: "/clientes/ironmaster.webp" },
+  { nombre: "HeatWave Co.", logo: "/clientes/heatwave.jpg" },
+  { nombre: "Burbuwash", logo: "/clientes/burbuwash.jpg" },
 ];
 
 const ClientesSection = () => {

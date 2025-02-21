@@ -108,7 +108,7 @@ Detalles adicionales: *${detalles || "Sin detalles adicionales"}*`;
       <NavBar />
 
       {/* Formulario de Cotización */}
-      <div className="bg-gray-100 py-8 px-4">
+      <div className="bg-gray-100 py-8 px-4 shadow-2xl">
         <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold text-center mb-6">
             Solicita tu Cotización
@@ -152,7 +152,7 @@ Detalles adicionales: *${detalles || "Sin detalles adicionales"}*`;
               </label>
               <input
                 type="text"
-                placeholder="Ingresa el tamaño aproximado que busca en su equipo"
+                placeholder="El tamaño específico que busca en su equipo"
                 value={perso}
                 onChange={(e) => setPerso(e.target.value)}
                 className="w-full p-2 border rounded mb-3 focus:outline-none focus:ring-2 focus:ring-matec-blue"
@@ -230,7 +230,7 @@ Detalles adicionales: *${detalles || "Sin detalles adicionales"}*`;
             onClick={enviarWhatsApp}
             className="w-full bg-matec-blue hover:bg-technical-blue text-white font-bold py-3 rounded transition-colors duration-300"
           >
-            Enviar Cotización por WhatsApp
+            Solicitar Cotización por WhatsApp
           </button>
         </div>
 

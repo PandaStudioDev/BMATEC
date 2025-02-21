@@ -29,7 +29,7 @@ const Diferenciadores = () => {
       trigger: section,
       start: "top top",
       end: "+=300%", // Extiende el tiempo de enfoque para apreciar la animación
-      scrub: 1, // Transición fluida
+      scrub: 2,
       pin: true, // Fija la sección durante el scroll
       onUpdate: (self) => {
         const index = Math.min(
@@ -41,7 +41,6 @@ const Diferenciadores = () => {
       // markers: true,
     });
 
-    // Animación de las ventajas: se disparan en función del scroll en la sección
     mejorasRef.current.forEach((el) => {
       gsap.fromTo(
         el,
@@ -49,13 +48,13 @@ const Diferenciadores = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 2,
+          duration: 0.5,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: el, // Cada elemento se usa como disparador
-            start: "top 30%", // Cuando la parte superior del elemento llega al 80% del viewport
-            end: "bottom", // Hasta que la parte inferior llegue al 60%
-            scrub: true, // Sincroniza la animación con el scroll
+            trigger: el,
+            start: "top 30%",
+            end: "bottom",
+            scrub: 2,
             // markers: true,
           },
         }
