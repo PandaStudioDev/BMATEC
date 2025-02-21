@@ -24,8 +24,8 @@ const Diferenciadores = () => {
             trigger: el,
             start: "top 80%",
             end: "bottom",
-            scrub: 2,
-            markers: true,
+            scrub: true,
+            // markers: true,
           },
         }
       );
