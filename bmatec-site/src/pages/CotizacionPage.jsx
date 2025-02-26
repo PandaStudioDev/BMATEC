@@ -228,7 +228,7 @@ Detalles adicionales: *${detalles || "Sin detalles adicionales"}*`;
 
           <button
             onClick={enviarWhatsApp}
-            className="w-full bg-matec-blue hover:bg-technical-blue text-white font-bold py-3 rounded transition-colors duration-300"
+            className="w-full bg-matec-blue hover:bg-technical-blue text-white font-bold py-3 rounded transition-colors duration-300 z-10 cursor-pointer"
           >
             Solicitar Cotización por WhatsApp
           </button>
@@ -240,7 +240,7 @@ Detalles adicionales: *${detalles || "Sin detalles adicionales"}*`;
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => enviarWhatsAppServicio("Instalación de Equipo")}
-              className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-3 px-4 rounded transition transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-3 px-4 rounded transition transform hover:scale-105 z-10 cursor-pointer"
             >
               Solicitar Instalación
             </button>
@@ -248,13 +248,13 @@ Detalles adicionales: *${detalles || "Sin detalles adicionales"}*`;
               onClick={() =>
                 enviarWhatsAppServicio("Revisión de Mantenimiento")
               }
-              className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white font-bold py-3 px-4 rounded transition transform hover:scale-105"
+              className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white font-bold py-3 px-4 rounded transition transform hover:scale-105 z-10 cursor-pointer"
             >
               Mantenimiento Preventivo
             </button>
             <button
               onClick={() => enviarWhatsAppServicio("Asesoría Técnica")}
-              className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white font-bold py-3 px-4 rounded transition transform hover:scale-105"
+              className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white font-bold py-3 px-4 rounded transition transform hover:scale-105 z-10 cursor-pointer"
             >
               Asesoría Técnica
             </button>
