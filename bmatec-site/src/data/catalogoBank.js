@@ -11,7 +11,7 @@ export const Catalogo = [
     modelo: "FUC2025-90",
     descripcion:
       "Fusionadora automática 90cm\nBandas de Teflón Negro de 14 milésimas\nSensores de Correción de Banda\nTiempo y Temperatura Ajustable",
-    alimentacion: "Consumo de Energía Trifásica",
+    alimentacion: "Trifásica",
     imagen: "/catalogo/fusionadora.jpg",
   },
   {
