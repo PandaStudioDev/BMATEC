@@ -35,7 +35,7 @@ const ClientesSection = () => {
         >
           {clientes.map((cliente, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="bg-white p-6 rounded-2xl shadow-xl flex flex-col items-center w-56 transition-transform duration-300 hover:scale-105">
+              <div className="bg-white p-6 rounded-2xl shadow-xl flex flex-col items-center w-52 md:w-56 transition-transform duration-300 hover:scale-105">
                 <img
                   src={cliente.logo}
                   alt={cliente.nombre}
